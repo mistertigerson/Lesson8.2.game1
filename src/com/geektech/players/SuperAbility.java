@@ -1,5 +1,5 @@
 package com.geektech.players;
 
 public interface SuperAbility {
-    void applySuperAbility(Boss boss, Hero[] heroes);
+    void applySuperAbility(Boss boss, Hero[] avengers);
 }

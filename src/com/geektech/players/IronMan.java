@@ -8,7 +8,7 @@ public class IronMan extends Hero{
     }
 
     @Override
-    public void applySuperAbility(Boss boss, Hero[] heroes) {
+    public void applySuperAbility(Boss boss, Hero[] avengers) {
 
     }
 }

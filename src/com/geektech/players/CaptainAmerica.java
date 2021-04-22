@@ -1,6 +1,10 @@
 package com.geektech.players;
 
+import java.util.Random;
+
 public class CaptainAmerica extends Hero{
+    Random random = new Random();
+
 
     public CaptainAmerica(int health, int damage, String name,
                           EnumSuperAbility superAbility) {
@@ -8,7 +12,14 @@ public class CaptainAmerica extends Hero{
     }
 
     @Override
-    public void applySuperAbility(Boss boss, Hero[] heroes) {
+    public void applySuperAbility(Boss boss, Hero[] avengers) {
 
+        for (int i = 0; i < avengers.length; i++) {
+            if (avengers[i].getHealth() > 0 && avengers[i] == this){
+                avengers[i].setDamage(25);
+                avengers[i].setDamage(avengers[i].getDamage() + random.nextInt(boss.getDamage()));
+            }
+
+        }
     }
 }
