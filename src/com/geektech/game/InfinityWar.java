@@ -11,26 +11,31 @@ public class InfinityWar {
         CaptainAmerica captainAmerica = new CaptainAmerica(
                 250, 25, "Captain America",
                 EnumSuperAbility.SHIELD_STRIKE);
-
+        captainAmerica.setDamage(25);
 
         IronMan ironMan = new IronMan(
                 220, 30, "Iron Man",
                 EnumSuperAbility.SUPER_SHOOT);
-
+        ironMan.setDamage(30);
         Hulk hulk = new Hulk(
                 300, 35, "Hulk",
                 EnumSuperAbility.ALL_CRASH);
-
+        hulk.setDamage(35);
         Medic doc = new Medic(
                 220, 5, "Doctor",
                 EnumSuperAbility.TO_HEAL, 15);
+        doc.setDamage(5);
 
         Medic assistant = new Medic(
                 240, 5, "Assistant",
                 EnumSuperAbility.TO_HEAL,10);
+        assistant.setDamage(5);
+
 
         Hero[] avengers = {captainAmerica, ironMan,
                 hulk, doc, assistant};
+
+
 
         System.out.println("_____THE INFINITY WAR IS STARTED_____");
         printStatistics(thanos, avengers);
@@ -81,6 +86,7 @@ public class InfinityWar {
             }
         }
     }
+
 
     private static void bossDamage(Boss boss, Hero[] avengers){
         for (int i = 0; i < avengers.length; i++) {
