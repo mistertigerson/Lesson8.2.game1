@@ -5,12 +5,12 @@ import com.geektech.players.*;
 public class InfinityWar {
 
     public static void startBattle() {
-        Boss thanos = new Boss(2000, 50,
+        Boss thanos = new Boss(10000, 50,
                 "\uD83D\uDFE3 Thanos");
         thanos.setDamage(50);
 
         CaptainAmerica captainAmerica = new CaptainAmerica(
-                250, 25, "\uD83D\uDEE1 Captain America ️",
+                250, 25, "\uD83D\uDEE1 Captain America️",
                 EnumSuperAbility.SHIELD_STRIKE);
         captainAmerica.setDamage(25);
 
@@ -21,7 +21,7 @@ public class InfinityWar {
         Hulk hulk = new Hulk(
                 300, 35, "\uD83D\uDFE2 Hulk  ",
                 EnumSuperAbility.ALL_CRASH);
-        hulk.setDamage(35);
+        hulk.setDamage(5);
         Medic doc = new Medic(
                 220, 5, "\uD83D\uDC8A️ Doctor",
                 EnumSuperAbility.TO_HEAL, 15);
@@ -32,15 +32,20 @@ public class InfinityWar {
                 EnumSuperAbility.TO_HEAL, 10);
         assistant.setDamage(5);
 
-        Thor thor = new Thor(256, 23, "\uD83C\uDF29️ Thor", EnumSuperAbility.STAN);
+        Thor thor = new Thor(256, 23, "\uD83C\uDF29️ Thor",
+                EnumSuperAbility.STAN);
         thor.setDamage(23);
 
-        Tank tank = new Tank(600, 5, "Tank", EnumSuperAbility.RELAX);
+        Tank tank = new Tank(600, 5, "Tank",
+                EnumSuperAbility.RELAX);
         tank.setDamage(5);
 
+        Wither wither = new Wither(245, 0, "Wither",
+                EnumSuperAbility.WRATH);
+        wither.setDamage(0);
 
         Hero[] avengers = {captainAmerica, ironMan,
-                hulk, doc, assistant, thor, tank};
+                hulk, doc, assistant, thor, tank, wither};
 
 
         System.out.println("_____THE INFINITY WAR IS STARTED_____");

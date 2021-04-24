@@ -11,19 +11,23 @@ public class Thor extends Hero {
 
     @Override
     public void applySuperAbility(Boss boss, Hero[] avengers) {
-        int integer = random.nextInt(5);
+        int integer = random.nextInt(3);
+        boolean isStunned = random.nextBoolean();
+        int counter = 0;
         for (int i = 0; i < avengers.length; i++) {
-            if (avengers[i].getHealth() > 0 && avengers[i] != this && avengers[i].getHealth() > 0) {
+            if (avengers[i].getHealth() > 0 && avengers[i] != this && avengers[i].getHealth() > 0 && boss.getHealth() > 0) {
                 switch (integer) {
                     case 1:
                         avengers[i].setHealth(avengers[i].getHealth() + boss.getDamage());
-                        System.out.println("------\uD83C\uDF29 Thor оглушил босса------");
+                        counter++;
                         break;
                     default:
                         boss.setDamage(50);
                         break;
                 }
-
+                if (counter==1){
+                    System.out.println("@@@@@@@тор оглушил босса");
+                }
             }
         }
 

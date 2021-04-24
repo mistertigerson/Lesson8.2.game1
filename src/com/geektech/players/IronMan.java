@@ -16,21 +16,22 @@ public class IronMan extends Hero {
         for (int i = 0; i < avengers.length; i++) {
             int integer = random.nextInt(60);
             if (avengers[i].getHealth() > 0 && avengers[i] != this) {
-                if (avengers[i].getName().equals("Captain America")) {
+                if (avengers[i].getName().equals("\uD83D\uDEE1 Captain America️")) {
                     avengers[i].setDamage(25);
-                } else if (avengers[i].getName().equals("Hulk")) {
+                } else if (avengers[i].getName().equals("\uD83D\uDFE2 Hulk  ")) {
+                    avengers[i].setDamage(5);
+                } else if (avengers[i].getName().equals("\uD83D\uDC8A️ Doctor")) {
+                    avengers[i].setDamage(5);
+                } else if (avengers[i].getName().equals("\uD83D\uDC89 Assistant")) {
+                    avengers[i].setDamage(5);
+                }else if (avengers[i].getName().equals("\uD83C\uDF29️ Thor")) {
                     avengers[i].setDamage(35);
-                } else if (avengers[i].getName().equals("Doctor")) {
+                } else if (avengers[i].getName().equals("Tank")) {
                     avengers[i].setDamage(5);
-                } else if (avengers[i].getName().equals("Assistant")) {
-                    avengers[i].setDamage(5);
-                }
-                else  if (avengers[i].getName().equals("Thor")){
-                    avengers[i].setDamage(23);
-                }
-                else  if (avengers[i].getName().equals("Tank")){
+                } else if (avengers[i].getName().equals("Wither")) {
                     avengers[i].setDamage(5);
                 }
+
                 avengers[i].setDamage(avengers[i].getDamage() + integer);
                 System.out.println("iron man увеличил атаку " + avengers[i].getName() +
                         " каждого героя на " + integer);
