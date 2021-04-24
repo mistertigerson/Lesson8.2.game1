@@ -25,6 +25,12 @@ public class IronMan extends Hero {
                 } else if (avengers[i].getName().equals("Assistant")) {
                     avengers[i].setDamage(5);
                 }
+                else  if (avengers[i].getName().equals("Thor")){
+                    avengers[i].setDamage(23);
+                }
+                else  if (avengers[i].getName().equals("Tank")){
+                    avengers[i].setDamage(5);
+                }
                 avengers[i].setDamage(avengers[i].getDamage() + integer);
                 System.out.println("iron man увеличил атаку " + avengers[i].getName() +
                         " каждого героя на " + integer);

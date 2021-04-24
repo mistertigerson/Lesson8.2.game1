@@ -35,9 +35,12 @@ public class InfinityWar {
         Thor thor = new Thor(256, 23, "\uD83C\uDF29️ Thor", EnumSuperAbility.STAN);
         thor.setDamage(23);
 
+        Tank tank = new Tank(600, 5, "Tank", EnumSuperAbility.RELAX);
+        tank.setDamage(5);
+
 
         Hero[] avengers = {captainAmerica, ironMan,
-                hulk, doc, assistant, thor};
+                hulk, doc, assistant, thor, tank};
 
 
         System.out.println("_____THE INFINITY WAR IS STARTED_____");
